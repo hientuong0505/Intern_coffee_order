@@ -1,8 +1,8 @@
 <?php
-    include (__DIR__ . '\..\lib\session.php');
+    require_once (__DIR__ . '\..\lib\session.php');
 
-    include (__DIR__ . '\..\lib\database.php');
-    include (__DIR__ . '\..\helper\format.php');
+    require_once (__DIR__ . '\..\lib\database.php');
+    require_once (__DIR__ . '\..\helper\format.php');
 
 ?>
 
@@ -83,6 +83,21 @@ class Category
                 return $alert;
             }
 
+        }
+    }
+
+    public function deleteCategory($id)
+    {
+        $query = "DELETE FROM category WHERE cate_id = '$id'";
+        $result = $this->db->delete($query);
+
+        if($result)
+        {
+            $alert = "<span class='fs-4'>*Xóa thành công*</span>";
+            return $alert;
+        } else{
+            $alert = "<span class='fs-4'>Error:Xóa thất bại, hãy kiểm tra!!!</span>";
+            return $alert;
         }
     }
 

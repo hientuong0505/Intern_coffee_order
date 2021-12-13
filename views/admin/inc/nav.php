@@ -14,7 +14,7 @@
 
             <ul class="navbar-nav"></ul>
             <?php
-              include(__DIR__ . '\..\..\lib\session.php');
+              // include(__DIR__ . '\..\..\..\lib\session.php');
               Session::checkSession();
               if (isset($_GET['action']) && $_GET['action'] == 'logout') {
                 Session::destroy();

@@ -36,4 +36,10 @@ class Format
         }
         return $title = ucfirst($title);
     }
+
+    public function currency_format($number, $suffix = 'VND') {
+        if (!empty($number)) {
+            return number_format($number, 0, ',', '.') . " {$suffix}";
+        }
+    }
 }

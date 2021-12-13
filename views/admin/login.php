@@ -1,5 +1,5 @@
 <?php
-    include '../../classes/adminlogin.php';
+    include '../../controllers/adminlogin.php';
 ?>
 
 <?php
