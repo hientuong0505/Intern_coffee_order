@@ -5,6 +5,10 @@
 	$db = new Database();
 	$fm = new Format();
 	$item = new Item();
+	$cart = new Cart();
+	$cate = new Category();
+
+	Session::init();
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +29,8 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
@@ -49,31 +54,6 @@
 							<ul class="top_nav_menu">
 
 								<!-- Currency / Language / My Account -->
-
-								<li class="currency">
-									<a href="#">
-										usd
-										<i class="fa fa-angle-down"></i>
-									</a>
-									<ul class="currency_selection">
-										<li><a href="#">cad</a></li>
-										<li><a href="#">aud</a></li>
-										<li><a href="#">eur</a></li>
-										<li><a href="#">gbp</a></li>
-									</ul>
-								</li>
-								<li class="language">
-									<a href="#">
-										English
-										<i class="fa fa-angle-down"></i>
-									</a>
-									<ul class="language_selection">
-										<li><a href="#">French</a></li>
-										<li><a href="#">Italian</a></li>
-										<li><a href="#">German</a></li>
-										<li><a href="#">Spanish</a></li>
-									</ul>
-								</li>
 								<li class="account">
 									<a href="#">
 										My Account
@@ -81,7 +61,6 @@
 									</a>
 									<ul class="account_selection">
 										<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
-										<li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
 									</ul>
 								</li>
 							</ul>

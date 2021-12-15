@@ -6,4 +6,5 @@
 
     require_once(__DIR__ . '\..\controllers\item.php');
     require_once(__DIR__ . '\..\controllers\category.php');
+    require_once(__DIR__ . '\..\controllers\cart.php');
 ?>
